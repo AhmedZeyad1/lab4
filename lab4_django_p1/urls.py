@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import default_view
+from lab4_django_p1.views import default_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', default_view, name='default')
 ]
